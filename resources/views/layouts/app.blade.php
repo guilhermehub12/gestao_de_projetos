@@ -18,6 +18,7 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
     <link id="pagestyle" href="assets/css/argon-dashboard.css" rel="stylesheet" />
 </head>
 
@@ -47,6 +48,7 @@
     @endauth
 
     <!--   Core JS Files   -->
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap.min.js"></script>
     <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -65,6 +67,7 @@
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="assets/js/argon-dashboard.js"></script>
     @stack('js');
+    @stack('modals');
 </body>
 
 </html>

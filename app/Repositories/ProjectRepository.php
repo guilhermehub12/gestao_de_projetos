@@ -63,7 +63,7 @@ class ProjectRepository
 
 
             $projeto = new $this->model($data);
-            $projeto->status = Status::rascunho();
+            // $projeto->status = Status::rascunho();
             $projeto->save();
 
             DB::commit();

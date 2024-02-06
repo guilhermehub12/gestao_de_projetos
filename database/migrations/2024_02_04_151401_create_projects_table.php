@@ -22,10 +22,10 @@ return new class extends Migration
             $table->string('slug');
             $table->boolean('ativo')->default(1);
 
-            $table->unsignedBigInteger('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->unsignedBigInteger('status_id')->nullable();
-            $table->foreign('status_id')->nullable()->references('id')->on('status')->onUpdate('cascade');
+            // $table->unsignedBigInteger('usuario_id');
+            // $table->foreign('usuario_id')->references('id')->on('users')->onUpdate('cascade');
+            // $table->unsignedBigInteger('status_id')->nullable();
+            // $table->foreign('status_id')->nullable()->references('id')->on('status')->onUpdate('cascade');
             $table->unsignedBigInteger('created_by');
             $table->foreign('created_by')->references('id')->on('users')->onUpdate('cascade');
             $table->unsignedBigInteger('updated_by');

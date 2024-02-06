@@ -18,6 +18,9 @@
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                         Perfil
                                     </th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        Email
+                                    </th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Ações</th>
@@ -37,6 +40,9 @@
                                     </td>
                                     <td>
                                         <p class="text-sm font-weight-bold mb-0">Admin</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-bold mb-0">Admin@email.com</p>
                                     </td>
                                     <td class="align-middle text-end">
                                         <div class="d-flex px-3 py-1 justify-content-center align-items-center">

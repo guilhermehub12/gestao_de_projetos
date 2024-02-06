@@ -32,10 +32,8 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('home')->middle
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
-    Route::get('/user-management', [UserProfileController::class, 'show'])->name('user-management');
+    Route::get('/user-management', [UserProfileController::class, 'index'])->name('user-management');
     Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');
-
-    // Route::get('/{page}', [PageController::class, 'index'])->name('page');
 
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -43,7 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
     Route::post('/projects', [ProjectController::class, 'store'])->name('projects.store');
     Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
-    Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
+    Route::get('/projects/{project}/editar', [ProjectController::class, 'edit'])->name('projects.edit');
     Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
     Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 });

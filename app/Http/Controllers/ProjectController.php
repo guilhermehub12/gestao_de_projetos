@@ -25,9 +25,10 @@ class ProjectController extends Controller
     public function index(Request $request)
     {
         $projects = $this->projectRepository->paginate(10, 'created_at', 'DESC', $request->except(['_token', 'page']));
-
         return view('pages.projects.index', [
-            'projects' => $projects
+            'projects' => $projects,
+            'users' => $this->userRepository->selectOption(),
+            'status' => $this->statusRepository->selectOption()
         ]);
     }
 
@@ -36,8 +37,6 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        // dd($this->userRepository->selectOption());
-
         return view('pages.projects.create', [
             'users' => $this->userRepository->selectOption(),
             'status' => $this->statusRepository->selectOption()
